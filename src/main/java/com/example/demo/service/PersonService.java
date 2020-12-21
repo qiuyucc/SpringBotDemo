@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -18,7 +17,7 @@ public class PersonService {
     private final PersonDao personDao;
 
     @Autowired
-    public PersonService(@Qualifier("fakeDao") PersonDao personDao) {
+    public PersonService(@Qualifier("postgres") PersonDao personDao) {
         this.personDao = personDao;
     }
 
